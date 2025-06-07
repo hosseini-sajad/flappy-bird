@@ -32,7 +32,7 @@ class PlayerLogic {
                         player.y + player.speed * deltaTime + 0.5 * Player.acceleration * deltaTime * deltaTime
                     var newSpeed = player.speed + Player.acceleration * deltaTime
 
-                    if (newY > 500) {
+                    if (newY > 2000) {
                         newY = 0.0
                         newSpeed = 0f
                     }
@@ -46,8 +46,7 @@ class PlayerLogic {
     fun jump() {
         _playerPosition.update { player ->
             player.copy(
-                y = 0f,
-                speed = 0f
+                speed = -1f
             )
         }
     }
